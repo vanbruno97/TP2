@@ -1,0 +1,153 @@
+*{ box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    font-family:montserrat;
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
+}
+/* Essayer de regrouper les infos similaires */
+body{
+    font-family: montserrat;
+    width: 100%;
+    height: 100vh;
+}
+ul{
+    list-style-type: none;
+    /* margin: 0;
+    padding: 0; */
+    overflow: hidden;
+    background-color:#0f2243;
+}
+li{
+    float: right;
+    padding-bottom: 12px;
+}
+li a{
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    /* background-color: black; */
+    border-bottom: 1px solid #D72385;
+  }    
+.active{
+    border-bottom: 1px solid #fff;
+    
+}
+.logo{
+    width: 40px;
+   position: absolute;
+   top: 14px;
+   left: 130px;
+}
+.nl{
+    position: absolute;
+    left: 179px;
+    top: 17px;
+    font-size: 16px;
+    color: #fff;  
+}
+/* style contenu de départ */
+.flex-container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    text-align: center;
+    height: 180px;
+    margin-top: 30px;
+}
+.flex-container>div{
+    margin: 10px;
+    text-align: center;
+}
+.button{
+    background-color:#D72385;
+    text-decoration: none;
+    color: #fff;
+    margin: 20%;
+    width: 60%;
+    padding: 6px;
+    border-radius: 14px;
+    font-size: 17px;
+}
+.flex-container .button:hover{
+    color: black;
+    background-color: aquamarine;
+}
+.yo{
+    font-size: 18px;
+    font-weight:200;
+}
+/* fin style contenu de départ */
+/* Style accroche*/
+.contenant{
+    margin: 29px 0;
+    padding: 50px 0;
+    background-color:#eeeeee;
+}
+   
+.contenant .milieu{
+    display: flex;
+    align-items: center;
+}
+.contenant .milieu .image{
+    width: 50%;
+    padding-left: 15%;
+}
+.contenant .milieu .texte{
+    width: 50%;
+    padding-right: 10%;
+}
+.contenant .milieu .texte h2{
+    margin-bottom: 22px;
+    font-weight: normal;  
+}
+.contenant .milieu .texte p{
+    text-align: justify;
+    line-height: 1.3;
+    color: black;
+}
+/* fin accroche */
+/* style main */
+.principal{
+    margin: 29px 0;
+    padding: 50px 0;
+}
+.principal .texte{
+    justify-content: center;
+    width: 50%;
+    margin-left: 230px;
+}
+.principal .texte .propos{
+    font-size: 25px;
+}
+
+/* .principal .liste .programmes{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+} */
+
+.principal .texte .liste h3 {
+margin-bottom: 20px;
+}
+
+.principal .texte .programmes{
+display: flex;
+flex-direction: column;
+background-color: #fff;
+}
+/* fin contenu principal */
+.fp .bas{
+    background-color: #0f2243;
+    height: 25%;
+    color: #fff;
+    padding: 55px 34px;
+}
+.paragraphe{
+    margin-left: 190px;
+}

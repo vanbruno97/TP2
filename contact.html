@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/style.css">
+      <!-- balises open graph -->
+      <meta property="og:title" content="Travaux Pratiques N°2"/>
+      <meta property="og:description" content="Travaux pratiques avec Html et Css">
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://vanbruno97.github.io/TP2/images/logo-trans%20copy.png" />
+      <meta property="og:url" content="https://vanbruno97.github.io/TP2" />
+</head>
+<body>
+ <!--Début barre de navigation -->
+<nav class="navigation">
+    <div class="container">
+    <a href="index.html" class="logo">
+        <img src="images/logo-trans copy.png" alt="Letecode-image">
+    <span>Letecode</span>
+    </a>
+    <ul class="menu">
+        <li class="menu-selection">
+        <a href="index.html">Accueil</a>
+        </li>
+        <li class="menu-selection">
+            <a href="communaute.html">Communauté</a>
+        </li>
+        <li class="menu-selection">
+            <a href="cours.html">Cours</a>
+        </li>
+         <li class="menu-selection active">
+            <a href="contact.html">Contacts</a>
+         </li>
+    </ul>
+    </div> 
+</nav>
+       <!-- fin barre de navigation -->
+        <!-- Début Intro  -->
+        <section class="section contact">
+            <div class="container">
+                <div>
+                <h3>Nous contacter</h3>
+                </div>
+                <div>
+                <p>Remplissez ce formulaire pour nous laisser un message</p>
+                </div>
+            </div>
+        </section>
+            <!--Fin Intro  -->
+        <section class="formulaires">
+        <div class="container">
+            <div class="info1">
+                <div class="Nom">
+                    <div>
+                     <form action="">
+                    <label for="name">Nom</label>
+                    <div>
+                     <input class="fill" type="text" id="Name">
+                    </div>
+                     </form>
+                    </div>   
+                </div>
+                    <div>
+                        <div>
+                            <label for="country">Pays</label>
+                        </div>
+                        <div class="pays">
+                            <form>
+                    
+                                <select class="fill" id="country" name="country">
+                               <option value="Cameroun">Cameroun</option>
+                               <option value="RDC">RDC</option>
+                               <option value="Sénégal">Senegal</option>
+                                </select>
+                            </form>
+                        </div>
+                     </div>
+                </div>
+            <div class="info2">
+                <div class="mail">
+                    <div>
+                    <form action="">
+                            <label for="email">Adresse email</label>
+                    </div>
+                    <div>
+                        <input class="fill" type="email" id="email">
+                    </div>
+                     </form>
+                </div>
+                    <div class="objectif">
+                        <div>
+                            <form>
+                                <label for="objectif">Objectif</label>
+                        </div>
+                        <div>
+                                <input class="fill" type="text" id="objectif">
+                            </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="info3">
+                        <div class="message-txt">
+                            <div>
+                            <form action="">
+                                    <label for="message">Message</label>
+                            </div>
+                            <div>
+                                <input class="fill1" type="text" id="message">
+                            </form>
+                            </div>      
+                        </div>
+                        <div>
+                            <form>
+                             <input type="button" class="button" value="Envoyer un message">
+                            </form>
+                         </div>
+                    </div>
+                </section>
+            <!-- Début formulaires  -->
+    
+<!-- <script src="js/scripts.js"></script>         -->
+</body>
+</html>

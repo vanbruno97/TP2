@@ -1,4 +1,4 @@
-*{ box-sizing: border-box;
+* { box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -9,158 +9,236 @@
 /* Essayer de regrouper les infos similaires */
 body{
     font-family: montserrat;
-    width: 100%;
 }
-/* début style barre de navigation (corriger prochainement les blocs en display) */
-ul{
-    list-style-type: none;
-    overflow: hidden;
-    background-color:#0f2243;
+/* Styles des classes générales */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
-li{
-    float: right;
-    padding-bottom: 12px;
+.section {
+    padding-top: 25px
+
 }
-li a{
-    display: inline-block;
+.marb-1 {
+    margin-bottom: 12px;
+}
+.marb-2{
+    margin-bottom: 22px;
+}
+.button.link {
+    background-color: #D72385;
     color: #fff;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
+    border-radius: 20px;
     text-decoration: none;
-}
-li a:hover {
-    border-bottom: 1px solid #D72385;
-  }    
-.active{
-    border-bottom: 1px solid #fff;
-    
-}
-.logo{
-    width: 40px;
-   position: absolute;
-   top: 14px;
-   left: 130px;
-}
-.nl{
-    position: absolute;
-    left: 179px;
-    top: 17px;
-    font-size: 16px;
-    color: #fff;  
-}
-/* fin style nav */
-/* style contenu de départ */
-.flex-container{
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    text-align: center;
-    margin-top: 30px;
-}
-.flex-container>div{
-    margin: 10px;
-    text-align: center;
-}
-.button{
-    background-color:#D72385;
-    text-decoration: none;
-    color: #fff;
-    margin: 20%;
-    width: 60%;
-    padding: 6px;
-    border-radius: 14px;
-    font-size: 17px;
-}
-.flex-container .button:hover{
-    color: black;
-    background-color: aquamarine;
-}
-/* marb pour margin bottom */
-.marb{
-    margin-bottom: 11px;
-}
-p.marb{
     margin-bottom: 20px;
-    font-size: 17px;
 }
-/* fin style contenu de départ */
-/* Style accroche*/
-.contenant{
-    margin: 29px 0;
-    padding: 50px 0;
-    background-color:#eeeeee;
+p{
+    margin-bottom: 16px;
 }
-   
-.contenant .milieu{
+
+/* Fin styles classes générales */
+/* barre de navigation */
+.navigation{
+    background-color:#0f2243;
+    height: 50px;
+}
+.navigation .container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-top: 9px;
+
+}
+.navigation a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+.navigation img {
+    width: 40px;
+    margin-right: 12px;
+}
+.navigation .menu{
     display: flex;
     align-items: center;
 }
-.contenant .milieu .image{
-    width: 50%;
-    padding-left: 15%;
+.navigation .menu-selection{
+    display: inline;
+    padding: 0 10px;
+    padding-bottom: 5px;
 }
-.contenant .milieu .texte{
-    width: 50%;
-    padding-right: 10%;
+.navigation .menu-selection.active{
+    border-bottom: 2px solid #fff;
 }
-.contenant .milieu .texte h2{
-    margin-bottom: 22px;
-    /* font-weight: normal;   */
+.navigation .menu li a:hover{
+    border-bottom: 2px solid #D72385;
 }
-.contenant .milieu .texte p{
-    text-align: justify;
-    line-height: 1.3;
+/* Fin barre de Navigation */
+/* Début phrase d'accroche */
+.section.accroche .container{
+    text-align: center;
+}
+.section.accroche .container a:hover{
+    background-color: aquamarine;
     color: black;
 }
-/* fin accroche */
-/* style main */
-.principal{
-    margin: 29px 0;
-    padding: 50px 0;
+/* Fin phrase d'accroche */
+/* début première partie */
+.section.pp {
+    background-color: #D8D8D8;
+    margin-top: 20px;
 }
-.principal .texte{
-    justify-content: center;
+.section.pp .container{
+    display: flex;
+    align-items: center;
+    padding: 0 90px;
+}
+.section.pp img {
+    width: 400px;
+    padding-right: 100px;
+}
+.section.pp .partblock {
     width: 50%;
-    margin-left: 230px;
 }
-.principal .texte .para{
-margin-bottom: 20px;
+/* Début deuxième partie */
+.section .container .liste li{
+  list-style-type: none;
 }
-.principal .texte .para p:nth-child(3)
-{
-    margin:30px 0;
+/* Début footer */
+footer{
+    background-color:#0f2243;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    /* padding: 60px 0 50px 0 ; */
 }
-.principal .texte .propos{
-    font-size: 25px;
+/* Fin footer */
+/* Styles pages communauté */
+/* début première partie */
+.section.communauté{
+    background-color: #D8D8D8;
+    margin-top: 20px;
 }
-.principal .texte .liste h3 {
-margin-bottom: 20px;
+.section.communauté .container{
+    display: flex;
+    padding: 0 10px;
+}
+.section.communauté .container p{
+    padding-right: 250px;
+}
+/* Fin première partie */
+/* Début style partie membres */
+.section.members .container h3{
+    margin: 0 0 12px 14px;
+}
+.section.members .membres .block-p-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section.members .membres .block-p-1 .photos-membres h3{
+    text-align: center;
+    font-weight: 300;
+}
+.section.members .membres img{
+    width: 150px;
+    height: 165px;
+    margin: 39px;
+    border-radius: 50%;
+    margin-bottom: 2px;}
+/* Fin style parties membres */
+/* Début style cours */
+
+.courses{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 300px 300px 300px;
+}
+.grid-items {
+    background-color:#fff;
+    padding: 10px;
+}
+.courses .grid-items img{
+    width: 100%;
+    height: 230px;
+     border: 1px solid black;
+     padding: 7px;
+}
+.grid-items .texte-cours h4{
+    font-weight: 200;
+}
+/* section abonnez-vous */
+.section.cours2{
+background-color: #D8D8D8;
+}
+.section.cours2 .container {
+    display: flex;
 }
 
-.principal .texte .programmes{
-display: flex;
-flex-direction: column;
-background-color: #fff;
+.section.cours2 .partblock1{
+   width: 50%;
 }
-/* fin contenu principal */
-/* début footer */
-.fp .bas{
-    background-color: #0f2243;
+.section.cours2 .partblock2 {
+    margin-top: 45px;
+    margin-left: 56px;
+    width: 50%;
+}
+
+.email{
+    width: 375px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #D8D8D8;
+    font-size: 14px;
+
+}
+
+.button {
+    width: 375px;
+    background-color: #D72385;
     color: #fff;
-    padding: 55px 0px;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
 }
-.paragraphe{
-    margin-left: 190px;
+/* Fin style cours */
+/* Début style contacts */
+.formulaires .info1 {
+    display: flex;
+    padding-bottom: 12px;
+    width: 100%;
 }
-/* fin footer */
-/* quelques lignes de code pour page de la communauté */
-.container1 .textec{
-    width: 20%;
-    text-align: left;
+.info1 .fill{
+    width: 50%;
 }
-#com { width: 50%;
-    padding-left: 10%;
+
+.info1 .pays {
+    width: 50%;
 }
-#cam {
-    padding-left: 10%;
+
+.formulaires .info2{
+    padding-bottom: 12px;
+    display: flex;
+}
+.formulaires .info3{
+    padding-bottom: 12px;
+}
+
+
+.info2 .mail{
+    width: 50%;
+}
+.info2 .objectif{
+    width: 50%;
+}
+
+.formulaires .container .fill{
+    background-color: #D8D8D8;
+    width: 50%;
 }

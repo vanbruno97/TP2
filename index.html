@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travaux Pratiques N°2</title>
-    <meta name="description" content="Travaux pratiques avec Html et Css">
+    <meta name="Accueil| TP2 " content="Travaux pratiques avec Html et Css">
     <link rel="stylesheet" href="css/style.css">
     <!-- balises open graph -->
     <meta property="og:title" content="Travaux Pratiques N°2"/>
@@ -16,83 +16,75 @@
 </head>
 <body>
     <!--Début barre de navigation -->
-    <nav>
-    <ul>
-        <img class="logo" src="images/logo-trans copy.png" alt="Letecode">
-        <span class="nl">Letecode</span>
-        <li>
-          <a href="#contacts">Contacts</a>
-        </li>
-        <li>
-           <a href="#cours">Cours</a>
-        </li>
-        <li>
-            <a href="communaute.html">Communauté</a>
-        </li>
-        <li>
-            <a href="index.html" class="active">Accueil</a>
-        </li>
-       </ul>
+    <nav class="navigation">
+        <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo-trans copy.png" alt="Letecode-image">
+        <span>Letecode</span>
+        </a>
+        <ul class="menu">
+            <li class="menu-selection active">
+            <a href="index.html">Accueil</a>
+            </li>
+            <li class="menu-selection">
+                <a href="communaute.html">Communauté</a>
+            </li>
+            <li class="menu-selection">
+                <a href="cours.html">Cours</a>
+            </li>
+             <li class="menu-selection">
+                <a href="contact.html">Contacts</a>
+             </li>
+        </ul>
+        </div>
     </nav>
-       <!-- fin barre de navigation -->
-    <header>
-        <!-- cfirst pour contenu de départ -->
-        <div class="flex-container">
-        <div>
-            <h1 class="marb">Bienvenue sur notre site</h1>
-            <p class="marb">Nous vous apprenons à changer le <br>monde avec votre créativité</p>
-            <a class="button "href="#button">Nous contacter</a>
-        </div>
-        </div>           
-    </header>
-    <!-- fin contenu de départ -->
-    <!-- Accroche -->
-    <section class="contenant">
-        <div class="milieu">
-            <div class="image">
-                <img src="images/logo-trans copy.png" alt="logo">
+        <!-- Fin barre de Navigation -->
+        <!-- Début phrase d'accroche -->
+        <section class="section accroche">
+            <div class="container">
+                <h1 class="marb-1">Bienvenue sur notre site</h1>
+                <p class="marb-2">Nous vous apprenons à changer le <br>monde avec votre créativité</p>
+            <a href="index.html" class="button link">Nous contacter</a>
             </div>
-            <div class="texte">
-            <h2>Vous avez<br>le droit d'apprendre</h2>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, recusandae explicabo placeat pariatur natus reprehenderit quod adipisci, quasi quam molestiae repellendus, aliquam in doloremque culpa. Molestias fugit minima officiis error!</p>
-
+        </section>
+        <!-- Fin phrase d'accroche -->
+        <!-- Début première partie -->
+        <section class="section pp">
+            <div class="container">
+                <div class="partblock">
+                    <img src="images/logo-trans copy.png" alt="Letecode-image">
+                </div>
+                <div class="partblock">
+                    <h2 class="marb-2">Vous avez<br>le droit d'apprendre</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae harum consequuntur magni distinctio amet neque ullam dignissimos, eveniet inventore? Doloribus nesciunt distinctio aliquid, sapiente molestiae rerum assumenda reprehenderit beatae quis.</p>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- fin accroche -->
-    <!-- début contenu principal -->
-    <section class="principal">
-        <div class="texte">
-            <h1 class="propos">A propos de Nous</h1>
-            <div class="para">
-            <br>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero nemo incidunt nostrum voluptate quae, dolor corporis eum quos et explicabo quia. Aliquid itaque ut in ipsam, alias quaerat nobis illo!</p>
-       
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio aliquid asperiores quas modi sunt. Nulla deserunt sint, natus officia veritatis voluptatibus laboriosam vero accusamus id minima quidem laudantium, adipisci debitis.</p>
-         
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex minus, iure nam nihil officia, eos maiores vitae soluta sapiente aliquam dolorum at, ab fugiat est amet laudantium doloribus et neque!</p>
-           </div>
-        <div class="liste">
-        <h3>Les options:</h3>
-            <ul class="programmes">
-                <li>- Git et Github</li>
-                <li>- HTML5</li>
-                <li>- CSS</li>
-                <li>- Javascript</li>
-            </ul>
-        </div>
-        </div>
-    </section>
-    <!-- début footer -->
-    <!-- fp: fin de page -->
-    <footer class="fp">
-        <div class="bas">
-            <p class="paragraphe">Developpé par Letecode @2023</p>  
-        </div>
-      
-
-    </footer>
-    
+        </section>
+        <!-- Fin première partie -->
+        <!-- Début deuxième partie -->
+        <section class="section">
+            <div class="container">
+                <h2 class="marb-2">A propos de Nous</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus temporibus quibusdam dicta. Veniam debitis harum ut velit aliquam id expedita maxime officiis, accusantium veritatis? Deserunt in tempora quisquam omnis.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, nesciunt eius minus iste iure aliquam officia! Sed, cupiditate dolorem culpa molestiae harum est quibusdam temporibus, eaque soluta aspernatur explicabo nesciunt.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis a deleniti iste molestiae magnam natus nemo similique, quo delectus accusantium non consectetur, voluptate velit, repellendus itaque voluptates animi exercitationem ipsum.</p>
+                <h3 class="marb-1">Les options:</h3>
+                <ul class="liste">
+                    <li>-Git et Github</li>
+                    <li>- HTML5</li>
+                    <li>- CSS</li>
+                    <li>- Javascript</li>  
+                </ul>
+            </div>
+        </section>
+        <!-- Fin deuxième partie -->
+        <!-- Début footer -->
+        <footer>
+            <div class="container">
+             <p>Developpé par Letecode &copy;2023</p>   
+            </div>
+        </footer>
+        <!-- fin footer -->
+   <!-- <script src="js/scripts.js"></script>  -->
 </body>
 </html>

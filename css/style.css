@@ -12,9 +12,27 @@ body{
 }
 /* Styles des classes générales */
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 40px;
 }
+.drawer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+    display: none;
+
+}
+.al-position{
+    text-align: start;
+    margin-bottom: 20px;
+}
+.al-down{
+    text-align: end;
+}
+    
 .section {
     padding-top: 25px
 
@@ -23,7 +41,14 @@ body{
     margin-bottom: 12px;
 }
 .marb-2{
-    margin-bottom: 22px;
+    margin-bottom: 25px;
+}
+.menu-mobile{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 27px;
 }
 .button.link {
     background-color: #D72385;
@@ -31,7 +56,7 @@ body{
     padding: 10px 10px;
     border-radius: 20px;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 p{
     margin-bottom: 16px;
@@ -61,8 +86,9 @@ p{
     margin-right: 12px;
 }
 .navigation .menu{
-    display: flex;
+    display: none;
     align-items: center;
+
 }
 .navigation .menu-selection{
     display: inline;
@@ -79,6 +105,7 @@ p{
 /* Début phrase d'accroche */
 .section.accroche .container{
     text-align: center;
+    margin-bottom: 30px;
 }
 .section.accroche .container a:hover{
     background-color: aquamarine;
@@ -93,16 +120,20 @@ p{
 .section.pp .container{
     display: flex;
     align-items: center;
-    padding: 0 90px;
+    /* padding: 20px 90px; */
+    flex-direction: column;
 }
 .section.pp img {
-    width: 400px;
-    padding-right: 100px;
+    width: 150px;
+    /* padding-right: 100px; */
 }
 .section.pp .partblock {
     width: 50%;
 }
 /* Début deuxième partie */
+.section .container .liste{
+    margin-bottom: 32px;
+}
 .section .container .liste li{
   list-style-type: none;
 }
@@ -112,24 +143,35 @@ footer{
     color: #fff;
     height: 80px;
     display: flex;
-    /* padding: 60px 0 50px 0 ; */
+    text-align: start;
+    padding: 40px 200px 40px 0 ;
 }
 /* Fin footer */
+
+
 /* Styles pages communauté */
 /* début première partie */
 .section.communauté{
     background-color: #D8D8D8;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .section.communauté .container{
     display: flex;
-    padding: 0 10px;
+    /* padding: 0 10px; */
+    align-items: center;
+    flex-direction: column;
+}
+.section.communauté img{
+    width: 180px;
 }
 .section.communauté .container p{
-    padding-right: 250px;
+    padding-right: 100px;
 }
 /* Fin première partie */
 /* Début style partie membres */
+.section.members {
+    margin-bottom: 50px;
+}
 .section.members .container h3{
     margin: 0 0 12px 14px;
 }
@@ -151,21 +193,24 @@ footer{
     margin-bottom: 2px;}
 /* Fin style parties membres */
 /* Début style cours */
-
-.courses{
-    display: grid;
-    gap: 30px;
-    grid-template-columns: 300px 300px 300px;
+.section.cours .container{
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+}
+.courses .container{
+    display: flex;
+    flex-direction: column;
 }
 .grid-items {
     background-color:#fff;
     padding: 10px;
 }
 .courses .grid-items img{
-    width: 100%;
-    height: 230px;
+    width: 16,66%;
+    height: 88px;
      border: 1px solid black;
-     padding: 7px;
+     padding: 0,08px;
 }
 .grid-items .texte-cours h4{
     font-weight: 200;
@@ -173,6 +218,7 @@ footer{
 /* section abonnez-vous */
 .section.cours2{
 background-color: #D8D8D8;
+margin-top: 47px;
 }
 .section.cours2 .container {
     display: flex;
@@ -211,14 +257,18 @@ background-color: #D8D8D8;
 /* Début style contacts */
 .formulaires .info1 {
     display: flex;
-    padding-bottom: 12px;
-    width: 100%;
+    padding-bottom: 20px;
+}
+.pays{
+    width: 500px;
 }
 .info1 .fill{
     width: 50%;
 }
-
-.info1 .pays {
+.info1 .Nom{
+    width: 50%;
+}
+.info1 .pays .fill{
     width: 50%;
 }
 
@@ -241,4 +291,84 @@ background-color: #D8D8D8;
 .formulaires .container .fill{
     background-color: #D8D8D8;
     width: 50%;
+    margin-top: 12px;
+    padding-top: 14px;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
 }
+.info3 {
+    margin-top: 12px;
+}
+.fill1 {
+    height: 125px;
+    width: 250px;
+    background-color: #D8D8D8;
+    margin-top: 12px;
+    padding: 14px 0;
+    border-radius: 5px;
+}
+.btn{
+    width: 225px;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #D72385;
+}
+/* Fin style contacts */
+/* Responsive */
+@media screen and (min-width: 567px) {
+    .al-position{
+        text-align: center;
+    }
+    .al-down{
+        text-align: center;
+    }
+    .intitulé{
+        text-align: center;
+    }
+}
+@media screen and (min-width : 768px)  {
+    .section.pp .container {
+        flex-direction: row;      
+    }
+    .section.pp img {
+       width: 400px;
+    }
+    .section.communauté .container{
+        flex-direction: row;
+    }
+    .section.communauté img{
+        width: 300px;
+    }
+    .section.cours .container{
+        flex-direction: row;
+    }
+    .courses{
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 300px 300px 300px;
+    }
+    .courses .grid-items img{
+        width: 100%;
+        height: 230px;
+         border: 1px solid black;
+         padding: 7px;
+    }
+    .grid-items {
+        background-color:#fff;
+        padding: 10px;
+    }
+    .menu-mobile{
+        display: none;
+        text-decoration: none;
+    }
+    .navigation .menu {
+        display:flex;
+    }
+}
+/* Fin responsive */

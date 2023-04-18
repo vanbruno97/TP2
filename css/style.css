@@ -168,35 +168,50 @@ footer{
 }
 /* Fin première partie */
 /* Début style partie membres */
-.section.members {
+/* .section.members {
     margin-bottom: 50px;
-}
-.section.members .container h3{
-    margin: 0 0 12px 14px;
-}
-.section.members .membres .block-p-1{
+} */
+.members-list{
     display: flex;
     flex-wrap: wrap;
+}
+.members-list .members-items{
+    width: 33%;
     justify-content: center;
     align-items: center;
+    margin-bottom: 25px;
 }
-.section.members .membres .block-p-1 .photos-membres h3{
-    text-align: center;
-    font-weight: 300;
-}
-.section.members .membres img{
-    width: 150px;
-    height: 165px;
-    margin: 39px;
+.members-items img {
+    width: 200px;
     border-radius: 50%;
-    margin-bottom: 2px;}
+    margin: 20px 20px;
+    height: 220px;
+}
+.members-items h4 {
+    margin-left: 70px;
+    font-weight: 200;
+}
+
 /* Fin style parties membres */
 /* Début style cours */
-.section.cours .container{
+.cours-list{
     display: flex;
-    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    /* flex-direction: column; */
 }
-.courses .container{
+.cours-list .cours-items {
+    width: 33%;
+    padding: 3px 3px;
+}
+.cours-list .cours-items img {
+    width: 100%;
+    border: 1px solid black;
+    height: 250px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #00000071;
+}
+/* .courses .container{
     display: flex;
     flex-direction: column;
 }
@@ -212,7 +227,7 @@ footer{
 }
 .grid-items h4{
     font-weight: 200;
-}
+} */
 /* section abonnez-vous */
 .section.cours2{
 background-color: #D8D8D8;
@@ -268,7 +283,7 @@ margin-top: 47px;
 }
 .info1 .fill{
     width: 50%;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 }
 .info1 .Nom{
     width: 50%;
@@ -301,10 +316,8 @@ margin-top: 47px;
     background-color: #D8D8D8;
     width: 50%;
     margin-top: 12px;
-    padding-top: 14px;
+    padding-top: 10px;
     border-radius: 5px;
-    text-align: center;
-    justify-content: center;
 }
 .info3 {
     margin-top: 12px;

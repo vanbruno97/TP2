@@ -1,0 +1,33 @@
+[
+    {
+    "name" : "Git & GitHub",
+    "time" : 5,
+    "image" : "images/Git.jpeg"
+    },
+    {
+        "name" : "Javascript",
+        "time" : 8,
+        "image" : "images/JavaScript-Logo.png"
+        },
+    {
+        "name" : "CSS",
+        "time" : 6,
+        "image" : "images/logoCss.jpeg"
+        },
+    {
+        "name" : "HTML5",
+        "time" : 5,
+        "image" : "images/logohtml.png"
+    },
+    {
+        "name" : "PHP",
+        "time" : 8,
+        "image" : "images/logophp.png"
+    },
+    {
+        "name" : "Laravel",
+        "time" : 8,
+        "image" : "images/Laravel-9.jpeg"
+    }
+
+]

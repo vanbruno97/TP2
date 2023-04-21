@@ -1,3 +1,21 @@
+
+// Elements responsives
+let text = document.querySelector(".drawer");
+let btn = document.querySelector(".menu-mobile");
+let button = document.querySelector (".close");
+let isVisible = false;
+
+btn.addEventListener('click', () =>{
+isVisible =! isVisible;
+isVisible ? text.classList.add('is-visible') : false ;
+})
+button.addEventListener('click', () =>{
+    isVisible =! isVisible;
+    isVisible ? true : text.classList.remove('is-visible') ;
+    })
+
+
+// Ajout des fichiers Json
 let courTemp = ` 
     <div class="cours-items">
         <img src="images/Git.jpeg" alt="cours 1">

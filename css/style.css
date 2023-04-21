@@ -1,55 +1,105 @@
-* { box-sizing: border-box;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-@font-face{
-    font-family:montserrat;
+
+@font-face {
+    font-family: montserrat;
     src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf')
 }
+
 /* Essayer de regrouper les infos similaires */
-body{
+body {
     font-family: montserrat;
+    width: 100%;
+    height: 100%;
 }
+
 /* Styles des classes générales */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
 }
-.drawer{
+
+/* Drawer début */
+.drawer {
     position: absolute;
     width: 100%;
     height: 100vh;
     background-color: #fff;
     z-index: 9999;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out , visibility 0.5s ease-in-out;
+  
+}
+.drawer.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
 
+.drawer a {
+    text-decoration: none;
+    color: #000;
 }
-.al-position{
+
+.drawer .menu-drawer {
+    margin: 100px 0px 0px 70px;
+}
+
+.drawer .menu-selection {
+    margin: 40px 0;
+}
+
+.drawer .menu-drawer li {
+    list-style-type: none;
+}
+
+.drawer .menu-selection.active a {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.close {
+    color: black;
+    font-size: 32px;
+    margin-left: 500px;
+    margin-top: 25px;
+}
+
+/* Drawer fin */
+
+.al-position {
     text-align: start;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
-.al-down{
-    text-align: end;
+
+.al-down {
+    align-items: flex-start;
 }
-    
+
 .section {
     padding-top: 25px
-
 }
+
 .marb-1 {
     margin-bottom: 12px;
 }
-.marb-2{
+
+.marb-2 {
     margin-bottom: 25px;
 }
-.menu-mobile{
+
+.menu-mobile {
     background-color: transparent;
     outline: none;
     border: none;
     color: #fff;
     font-size: 27px;
 }
+
 .button.link {
     background-color: #D72385;
     color: #fff;
@@ -58,16 +108,18 @@ body{
     text-decoration: none;
     margin-bottom: 30px;
 }
-p{
+
+p {
     margin-bottom: 16px;
 }
 
 /* Fin styles classes générales */
 /* barre de navigation */
-.navigation{
-    background-color:#0f2243;
+.navigation {
+    background-color: #0f2243;
     height: 50px;
 }
+
 .navigation .container {
     display: flex;
     justify-content: space-between;
@@ -75,180 +127,186 @@ p{
     padding-top: 9px;
 
 }
+
 .navigation a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #fff;
+    transition: all 1s ease-out;
 }
+
 .navigation img {
     width: 40px;
     margin-right: 12px;
 }
-.navigation .menu{
+
+.navigation .menu {
     display: none;
     align-items: center;
 
 }
-.navigation .menu-selection{
+
+.navigation .menu-selection {
     display: inline;
     padding: 0 10px;
     padding-bottom: 5px;
 }
-.navigation .menu-selection.active{
+
+.navigation .menu-selection.active {
     border-bottom: 2px solid #fff;
 }
-.navigation .menu li a:hover{
+
+.navigation .menu li a:hover, a:focus {
     border-bottom: 2px solid #D72385;
 }
+
 /* Fin barre de Navigation */
 /* Début phrase d'accroche */
-.section.accroche .container{
+.section.accroche .container {
     text-align: center;
     margin-bottom: 30px;
 }
-.section.accroche .container a:hover{
+
+.section.accroche .container a:hover {
     background-color: aquamarine;
     color: black;
 }
+
 /* Fin phrase d'accroche */
 /* début première partie */
 .section.pp {
     background-color: #D8D8D8;
     margin-top: 20px;
 }
-.section.pp .container{
+
+.section.pp .container {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
 .section.pp img {
     width: 150px;
-    /* padding-right: 100px; */
 }
+
 .section.pp .partblock {
     width: 50%;
 }
+
 /* Début deuxième partie */
-.section .container .liste{
+.section .container .liste {
     margin-bottom: 32px;
 }
-.section .container .liste li{
-  list-style-type: none;
+
+.section .container .liste li {
+    list-style-type: none;
 }
+
 /* Début footer */
-footer{
-    background-color:#0f2243;
+footer {
+    background-color: #0f2243;
     color: #fff;
     height: 80px;
     display: flex;
     text-align: start;
-    padding: 40px 200px 40px 0 ;
+    padding: 40px 200px 40px 0;
 }
+
 /* Fin footer */
 
 
 /* Styles pages communauté */
 /* début première partie */
-.section.communaute{
+.section.communaute {
     background-color: #D8D8D8;
     margin-top: 30px;
 }
-.section.communaute .container{
+
+.section.communaute .container {
     display: flex;
-    /* padding: 0 10px; */
     align-items: center;
     flex-direction: column;
 }
-.section.communaute img{
-    width: 180px;
+
+.section.communaute img {
+    width: 150px;
 }
-.section.communaute .container p{
-    padding-right: 100px;
-}
+
 /* Fin première partie */
 /* Début style partie membres */
 /* .section.members {
     margin-bottom: 50px;
 } */
-.members-list{
+.members-list {
     display: flex;
     flex-wrap: wrap;
 }
-.members-list .members-items{
-    width: 33%;
+
+.members-list .members-items {
+    width: 100%;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
+
 .members-items img {
-    width: 200px;
+    width: 160px;
     border-radius: 50%;
     margin: 20px 20px;
-    height: 220px;
+    height: 200px;
 }
+
 .members-items h4 {
-    margin-left: 70px;
+    margin-left: 20px;
     font-weight: 200;
 }
 
 /* Fin style parties membres */
 /* Début style cours */
-.cours-list{
+.cours-list {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    /* flex-direction: column; */
+    flex-direction: column;
 }
+
 .cours-list .cours-items {
-    width: 33%;
-    padding: 3px 3px;
+    width: 100%;
+    padding: 10px 10px;
 }
+
 .cours-list .cours-items img {
     width: 100%;
     border: 1px solid black;
-    height: 250px;
+    height: 280px;
     padding: 10px;
     box-shadow: 1px 1px 5px #00000071;
 }
-/* .courses .container{
-    display: flex;
-    flex-direction: column;
-}
-.grid-items {
-    background-color:#fff;
-    padding: 10px;
-}
-.courses .grid-items img{
-    width: auto;
-    height: 200px;
-     border: 1px solid black;
-     padding: 0,08px;
-}
-.grid-items h4{
-    font-weight: 200;
-} */
+
 /* section abonnez-vous */
-.section.cours2{
-background-color: #D8D8D8;
-margin-top: 47px;
+.section.cours2 {
+    background-color: #D8D8D8;
+    margin-top: 47px;
 }
+
 .section.cours2 .container {
     display: flex;
     flex-direction: column;
 }
 
-.section.cours2 .partblock1{
-   width: 50%;
-   flex-direction: column;
-}
-.section.cours2 .partblock2 {
-    margin-top: 45px;
-    margin-left: 56px;
+.section.cours2 .partblock1 {
     width: 50%;
 }
 
-.email{
+.section.cours2 .partblock2 {
+   margin-bottom: 22px;
+    width: 50%;
+}
+
+.email {
     width: 375px;
     padding: 10px;
     border-radius: 15px;
@@ -268,62 +326,72 @@ margin-top: 47px;
     font-size: 15px;
     cursor: pointer;
 }
+
 /* Fin style cours */
 /* Début style contacts */
 .section .sectioncontact .h3 {
     margin-bottom: 12px;
 }
+
 .formulaires .info1 {
     display: flex;
     flex-direction: column;
     padding-bottom: 30px;
 }
-.pays{
+
+.pays {
     width: 500px;
 }
-.info1 .fill{
+
+.info1 .fill {
     width: 50%;
     padding-bottom: 2px;
 }
-.info1 .Nom{
+
+.info1 .Nom {
     width: 50%;
     padding-bottom: 10px;
 }
-.info1 .pays .fill{
+
+.info1 .pays .fill {
     width: 50%;
 }
 
-.formulaires .info2{
+.formulaires .info2 {
     padding-bottom: 12px;
     display: flex;
     flex-direction: column;
 }
-.formulaires .info3{
+
+.formulaires .info3 {
     padding-bottom: 12px;
 }
 
 
-.info2 .mail{
-    width: 50%;
-    padding-bottom: 10px;
-}
-.info2 .objectif{
+.info2 .mail {
     width: 50%;
     padding-bottom: 10px;
 }
 
-.formulaires .container .fill{
+.info2 .objectif {
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.formulaires .container .fill {
     background-color: #D8D8D8;
     width: 50%;
     margin-top: 12px;
     padding-top: 10px;
     border-radius: 5px;
 }
+
 .info3 {
     margin-top: 12px;
     display: flex;
     flex-direction: column;
 }
+
 .fill1 {
     height: 125px;
     width: 250px;
@@ -332,7 +400,8 @@ margin-top: 47px;
     padding: 14px 0;
     border-radius: 5px;
 }
-.btn{
+
+.btn {
     width: 225px;
     color: #fff;
     padding: 10px;
@@ -343,66 +412,159 @@ margin-top: 47px;
     cursor: pointer;
     background-color: #D72385;
 }
+
 /* Fin style contacts */
 /* Responsive */
 @media screen and (min-width: 567px) {
-    .al-position{
+    .al-position {
         text-align: center;
     }
-    .al-down{
+
+    .al-down {
         text-align: center;
+        align-items: flex-start;
     }
 }
-@media screen and (min-width : 768px)  {
-    .section.pp .container {
-        flex-direction: row;      
-    }
-    .section.pp img {
-       width: 400px;
-    }
-    .section.communaute .container{
-        flex-direction: row;
-    }
-    .section.communaute img{
-        width: 300px;
-    }
-    .section.cours .container{
-        flex-direction: row;
-    }
-    .courses{
+
+@media screen and (min-width : 768px) {
+    .members-list {
         display: flex;
         flex-wrap: wrap;
     }
-    .courses .grid-items img{
-        width: 295px;
+
+    .members-list .members-items {
+        width: 33%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .members-items img {
+        width: 200px;
+        border-radius: 50%;
+        margin: 20px 20px;
         height: 220px;
-         border: 1px solid black;
-         box-shadow: 1px 1px 5px #00000071;
     }
-    .grid-items {
-        padding: 20px;
+
+    .members-items h4 {
+        margin-left: 20px;
+        font-weight: 200;
     }
+
+    .section.pp .container {
+        flex-direction: row;
+    }
+
+    .section.pp img {
+        width: 400px;
+    }
+
+    .section.communaute .container {
+        flex-direction: row;
+    }
+
+    .section.communaute img {
+        width: 200px;
+    }
+
+    .section.cours .container {
+        flex-direction: row;
+    }
+
+    .courses {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cours-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    .cours-list .cours-items {
+        width: 33%;
+        padding: 3px 3px;
+    }
+
+    .cours-list .cours-items img {
+        width: 100%;
+        border: 1px solid black;
+        height: 250px;
+        padding: 10px;
+        box-shadow: 1px 1px 5px #00000071;
+    }
+
     .section.cours2 .container {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
-    .menu-mobile{
+
+    .menu-mobile {
         display: none;
         text-decoration: none;
     }
+
     .navigation .menu {
-        display:flex;
+        display: flex;
     }
+
+    .section.cours2 {
+        background-color: #D8D8D8;
+        margin-top: 47px;
+    }
+
+    .section.cours2 .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .section.cours2 .partblock1 {
+        width: 50%;
+        flex-direction: row;
+    }
+
+    .section.cours2 .partblock2 {
+        margin-top: 45px;
+        width: 50%;
+    }
+
+    .email {
+        width: 375px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: #D8D8D8;
+        font-size: 14px;
+
+    }
+
+    .button {
+        width: 375px;
+        background-color: #D72385;
+        color: #fff;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
     .formulaires .info1 {
         display: flex;
         flex-direction: row;
         padding-bottom: 20px;
     }
-    .formulaires .info2{
+
+    .formulaires .info2 {
         padding-bottom: 12px;
         display: flex;
         flex-direction: row;
     }
 }
+
 /* Fin responsive */
